@@ -1,0 +1,152 @@
+/* 🍉 Global Styles: Setting the Stage 🍉 */
+body {
+    /* A soft, off-white background for contrast */
+    background-color: #f7fcf9; 
+    /* Use a clean, friendly font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333; /* Dark gray text */
+    margin: 0;
+    padding: 20px;
+    
+    /* MODIFIED: Increased padding to 100px to ensure content does not get clipped by the fixed footer */
+    padding-bottom: 100px;
+    
+    display: flex; /* Enable flexbox for main and sidebar layout */
+    gap: 30px; /* Space between main content and sidebar */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+h2 {
+    /* Vibrant watermelon pink/red for headings (The warm color) */
+    color: #ff6347; 
+    border-bottom: 2px solid #90ee90; /* Light green separator remains */
+    padding-bottom: 5px;
+}
+
+/* 🍉 Main Content Area 🍉 */
+#main {
+    flex-grow: 1; /* Allows main content to take up the most space */
+    max-width: 700px;
+    padding: 30px;
+    /* Soft white background with a subtle shadow */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 🍉 Emphasis Styles 🍉 */
+#happyCoding {
+    /* Watermelon rind green for 'Happy Coding' (The cool color) */
+    color: #2e8b57; 
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block; /* Make it stand out on its own line */
+    margin-top: 15px;
+    padding: 5px 0;
+    /* Simple, fun border around the text */
+    border-top: 1px dashed #ffc0cb; 
+}
+
+/* 🍉 Sidebar Area (The Fun Fact Box) 🍉 */
+#sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    padding: 20px;
+    /* Light pink background inspired by the fruit's flesh */
+    background-color: #ffe4e1; 
+    border-radius: 12px;
+    /* A subtle border using a complementary green */
+    border: 2px solid #8fbc8f; 
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* Styles specific to paragraphs in the sidebar */
+#sidebar p {
+    padding-left: 10px;
+    /* Accent line remains Watermelon red/pink */
+    border-left: 3px solid #ff6347; 
+    margin-bottom: 20px;
+}
+
+/* 🍉 PS Section Styles 🍉 */
+#ps-message {
+    /* To ensure it spans across the entire width below main and sidebar */
+    width: 100%; 
+    margin-top: 40px;
+    padding: 15px 30px;
+    /* Background is the light green of the rind */
+    background-color: #e0f2f1; 
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: 500;
+    /* Dark green text remains */
+    color: #2e8b57; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight the heart for extra personality */
+#ps-message .heart {
+    color: #ff6347; /* Watermelon Red remains */
+    font-size: 1.4em;
+    margin-left: 5px;
+}
+
+/* 🍉 Footer (Symbolism) Section Styles - NOW FIXED/STICKY 🍉 */
+#footer {
+    /* NEW: Fixed position at the bottom of the viewport */
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* Ensure it stays above other content */
+    
+    width: 100%; 
+    margin-top: 0; /* Not needed for fixed position */
+    padding: 20px 30px;
+    
+    /* Deep, serious green for the background */
+    background-color: #2e8b57; 
+    color: #ffffff; /* White text for high contrast */
+    text-align: left; /* Left alignment for readability */
+    
+    /* NEW: Remove border radius so it sits flush with screen edge */
+    border-radius: 0;
+    border-top: 4px solid #ff6347; 
+    font-size: 0.9em;
+}
+
+#footer p {
+    margin: 0; /* Removed internal paragraph gap */
+	padding: 10px 15px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* 🍉 Mobile Responsiveness 🍉 */
+@media (max-width: 800px) {
+    body {
+        /* Stack main and sidebar vertically on small screens */
+        flex-direction: column; 
+        padding-top: 10px;
+        /* Updated padding to 100px bottom for fixed footer */
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 100px; 
+    }
+    #sidebar, #main {
+        width: auto; /* Take full available width */
+        max-width: none;
+    }
+    #main {
+        margin-bottom: 20px;
+    }
+    #ps-message {
+        padding: 15px 10px;
+    }
+    #footer {
+        /* MODIFIED: Increased horizontal padding to 20px for better spacing on mobile */
+        padding: 20px 20px;
+    }
+}
