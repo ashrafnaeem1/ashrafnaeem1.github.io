@@ -8,8 +8,8 @@ body {
     margin: 0;
     padding: 20px;
     
-    /* MODIFIED: Increased padding to 100px to ensure content does not get clipped by the fixed footer */
-    padding-bottom: 100px;
+    /* MODIFIED: Increased padding to 120px to ensure content does not get clipped by the fixed footer */
+    padding-bottom: 120px;
     
     display: flex; /* Enable flexbox for main and sidebar layout */
     gap: 30px; /* Space between main content and sidebar */
@@ -95,7 +95,7 @@ h2 {
 
 /* 🍉 Footer (Symbolism) Section Styles - NOW FIXED/STICKY 🍉 */
 #footer {
-    /* NEW: Fixed position at the bottom of the viewport */
+    /* FIXED: Position at the bottom of the viewport */
     position: fixed; 
     bottom: 0;
     left: 0;
@@ -103,7 +103,6 @@ h2 {
     z-index: 100; /* Ensure it stays above other content */
     
     width: 100%; 
-    margin-top: 0; /* Not needed for fixed position */
     padding: 20px 30px;
     
     /* Deep, serious green for the background */
@@ -111,10 +110,13 @@ h2 {
     color: #ffffff; /* White text for high contrast */
     text-align: left; /* Left alignment for readability */
     
-    /* NEW: Remove border radius so it sits flush with screen edge */
+    /* Remove border radius so it sits flush with screen edge */
     border-radius: 0;
     border-top: 4px solid #ff6347; 
     font-size: 0.9em;
+    
+    /* ADDED: Prevents padding from adding to width causing overflow */
+    box-sizing: border-box;
 }
 
 #footer p {
@@ -129,27 +131,80 @@ h2 {
     body {
         /* Stack main and sidebar vertically on small screens */
         flex-direction: column; 
-        padding-top: 10px;
-        /* Updated padding to 100px bottom for fixed footer */
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 100px; 
+        padding: 15px;
+        /* MODIFIED: Increased padding to 140px for fixed footer */
+        padding-bottom: 140px; 
     }
+    
     #sidebar, #main {
         width: auto; /* Take full available width */
         max-width: none;
     }
+    
     #main {
         margin-bottom: 20px;
+        padding: 20px;
     }
+    
 	#sidebar {
-		margin-bottom: 64px;
+        /* MODIFIED: Reduced from 64px to 20px, spacing handled by body padding */
+		margin-bottom: 20px;
+        padding: 15px;
 	}
+    
     #ps-message {
-        padding: 15px 10px;
+        padding: 15px;
+        font-size: 1.1em;
     }
+    
     #footer {
-        /* MODIFIED: Increased horizontal padding to 20px for better spacing on mobile */
-        padding: 20px 20px;
+        /* MODIFIED: Reduced horizontal padding to prevent edge clipping */
+        padding: 15px;
+    }
+    
+    #footer p {
+        padding: 5px 0;
+        font-size: 0.9em;
+    }
+}
+
+/* 🍉 Extra Small Mobile Devices 🍉 */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        /* MODIFIED: Further increased for smaller screens where footer text wraps more */
+        padding-bottom: 160px;
+    }
+    
+    #main {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    #sidebar {
+        padding: 12px;
+        border-radius: 8px;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+    
+    #happyCoding {
+        font-size: 1em;
+    }
+    
+    #ps-message {
+        padding: 12px;
+        font-size: 1em;
+    }
+    
+    #footer {
+        padding: 12px;
+    }
+    
+    #footer p {
+        font-size: 0.85em;
+        line-height: 1.4;
     }
 }
