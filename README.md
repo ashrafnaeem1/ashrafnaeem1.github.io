@@ -1,2 +1,2 @@
-# ashrafnaeem1.github.io
-Ashraf Naeem's personal website.
+# rewrite branch of ashrafnaeem1.github.io
+A Development branch of Ashraf Naeem's personal website. This will be a rewrite using astro (see astro.build). Once this branch has been confirmed to be mature, it will be downstreamed to a newly created `dev` branch and also cloned to `main` branch. This branch will be removed at that point. `dev` branch will then recieve continued updates, and whenever its contents would become stable, `dev` would be merged to `main`.
