@@ -142,6 +142,9 @@ h2 {
     #main {
         margin-bottom: 20px;
     }
+	#sidebar {
+		margin-bottom: 64px;
+	}
     #ps-message {
         padding: 15px 10px;
     }
